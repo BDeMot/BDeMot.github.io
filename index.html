@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div data-scroll-container>
+    <div id="bigLetters" class="bigLetters">
+      <span class="bigLetters__letter bigLetters__letter--b">b</span>
+      <span class="bigLetters__letter bigLetters__letter--d">d</span>
+      <span class="bigLetters__letter bigLetters__letter--m">m</span>
+    </div>
+
+    <section class="presentation">
+      <div data-scroll-section id="firstParagraph"> 
+        <p 
+          data-scroll data-scroll-call="bigLettersTurnWhiteTrigger" 
+          data-scroll-direction="horizontal" 
+          data-scroll-speed="-4" 
+          data-scroll-class="inViewport"
+          class="presentation__text presentation__text--left">
+            Hi, my name is <br> De Mot.
+        </p>
+        <p 
+          data-scroll  
+          data-scroll-direction="horizontal" 
+          data-scroll-speed="4" 
+          data-scroll-class="inViewport"
+          class="presentation__text presentation__text--right">
+            Benjamin <br> De Mot.
+        </p>
+      </div>
+      <div  data-scroll-section class="logosAndText">
+        <div class="logos">
+          <img 
+            data-scroll 
+            data-scroll-delay="0.15"  
+            data-scroll-speed="3" 
+            src="images/html-5.png"
+            alt="logo HTML">
+          <img             
+            data-scroll 
+            data-scroll-delay="0.12"  
+            data-scroll-speed="3"
+            src="images/css.png"
+            alt="logo HTML">
+          <img             
+            data-scroll 
+            data-scroll-delay="0.09"  
+            data-scroll-speed="3"
+            src="images/html-5.png" 
+            alt="logo HTML">
+          <img             
+            data-scroll 
+            data-scroll-delay="0.06"  
+            data-scroll-speed="3"
+            src="images/html-5.png"
+            alt="logo HTML">
+          <img             
+            data-scroll 
+            data-scroll-delay="0.03"  
+            data-scroll-speed="3"
+            src="images/html-5.png" 
+            alt="logo HTML">
+
+        </div>
+        <p 
+          data-scroll
+          data-scroll-speed="3"
+          data-scroll-class="inViewport" 
+          class="presentation__text">
+          I'm a Front-End developer specialised in JavaScript, based in Paris.
+        </p>
+      </div>
+      <footer data-scroll-section>
+        <div>Icons made by 
+          <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+      </footer>
+    </section>
+
+  </div>
+    
+    <script src="./script/index.js"></script> 
+</body>
+</html>
+

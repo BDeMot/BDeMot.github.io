@@ -1,0 +1,11 @@
+{
+  "name": "neo_portfolio",
+  "version": "1.0.0",
+  "description": "new design portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/index.scss:./style/index.css"
+  },
+  "author": "Benjamin De Mot",
+  "license": "ISC"
+}

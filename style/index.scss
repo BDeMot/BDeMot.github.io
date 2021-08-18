@@ -22,6 +22,34 @@ body{
     overflow-x: hidden;
 }
 
+#nav{
+    background-color: $bg;
+    z-index: 1000;
+    text-align: right;
+    position: relative;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(1, 0.01, 1, 1);
+    text-overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
+    & span {
+        font-size: 2em;
+    }
+    & a {
+        text-decoration: none;
+        font-family: candal;
+        color: $fonts;
+        margin: auto;
+        font-size: 1.4em;
+        transition: all .10s cubic-bezier(1, 0.01, 1, 1);
+        &:hover{
+            border-bottom: 5px solid $fonts;
+        }
+    }
+}
+
 .bigLetters{
     font-size: 4500%;
     font-family: bowlby;
@@ -37,7 +65,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     &__letter{
         line-height: .4;
         text-transform: uppercase;
@@ -72,7 +99,7 @@ body{
 
 .inViewport{
     opacity: 1;
-    transition: all 2.4s ease-out;
+    transition: all 3.4s ease-out;
 }
 
 .logosAndText{
@@ -86,9 +113,91 @@ body{
     & .logos {
         width: 50%; 
         margin: 20px;
+        margin-top: 200px;
         & img{
             margin: 30px;
             width: 200px;
         }
+    }
+}
+
+#profilPicContainer{
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & img{
+        width: 370px;
+        height: 370px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity .5s linear;
+    }
+}
+
+#projectList{
+    margin-top: 300px;
+    margin-bottom: 400px;
+   
+    ul{
+        list-style-type: none;
+        position: relative;
+        right: 1000px; 
+        transform: rotate(-5deg);
+        & li{
+            border: 2px solid white;
+            background-color: $fonts;
+            width: 200%;
+            text-align: center; z-index: 0;
+            transition: all 100ms linear;
+            &:hover + .preview{
+                visibility: visible;
+                opacity: 1;
+                height: 400px;
+            }
+        }
+        & .preview{
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s linear;
+            height: 1px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            & .description {
+                font-family: candal;
+                font-size: 2em;
+                color: $bg;
+                margin-left: 4%;
+                display: flex;
+                align-items: center;
+            }
+            & video {
+                border: 25px solid $bg;
+            }
+            & img {
+                border: 25px solid $bg;
+            }
+        }
+        & li a{ 
+                margin-left: 500px;
+                font-family: candal;
+                text-transform: uppercase;
+                font-size: 100px;
+                font-weight: bold;
+                color: $bg;                
+            }
+        
+    }
+}
+
+#contact {
+    display: flex;
+    justify-content: space-around;
+    & img {
+    margin-bottom: 150px;
+    height: 300px;
     }
 }

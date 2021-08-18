@@ -17,6 +17,34 @@ body {
   overflow-x: hidden;
 }
 
+#nav {
+  background-color: beige;
+  z-index: 1000;
+  text-align: right;
+  position: relative;
+  margin-right: 10px;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(1, 0.01, 1, 1);
+  text-overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 40px;
+}
+#nav span {
+  font-size: 2em;
+}
+#nav a {
+  text-decoration: none;
+  font-family: candal;
+  color: #1f1e1e;
+  margin: auto;
+  font-size: 1.4em;
+  transition: all 0.1s cubic-bezier(1, 0.01, 1, 1);
+}
+#nav a:hover {
+  border-bottom: 5px solid #1f1e1e;
+}
+
 .bigLetters {
   font-size: 4500%;
   font-family: bowlby;
@@ -66,7 +94,7 @@ body {
 
 .inViewport {
   opacity: 1;
-  transition: all 2.4s ease-out;
+  transition: all 3.4s ease-out;
 }
 
 .logosAndText {
@@ -81,10 +109,91 @@ body {
 .logosAndText .logos {
   width: 50%;
   margin: 20px;
+  margin-top: 200px;
 }
 .logosAndText .logos img {
   margin: 30px;
   width: 200px;
+}
+
+#profilPicContainer {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#profilPicContainer img {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+#projectList {
+  margin-top: 300px;
+  margin-bottom: 400px;
+}
+#projectList ul {
+  list-style-type: none;
+  position: relative;
+  right: 1000px;
+  transform: rotate(-5deg);
+}
+#projectList ul li {
+  border: 2px solid white;
+  background-color: #1f1e1e;
+  width: 200%;
+  text-align: center;
+  z-index: 0;
+  transition: all 100ms linear;
+}
+#projectList ul li:hover + .preview {
+  visibility: visible;
+  opacity: 1;
+  height: 400px;
+}
+#projectList ul .preview {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+  height: 1px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#projectList ul .preview .description {
+  font-family: candal;
+  font-size: 2em;
+  color: beige;
+  margin-left: 4%;
+  display: flex;
+  align-items: center;
+}
+#projectList ul .preview video {
+  border: 25px solid beige;
+}
+#projectList ul .preview img {
+  border: 25px solid beige;
+}
+#projectList ul li a {
+  margin-left: 500px;
+  font-family: candal;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bold;
+  color: beige;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+}
+#contact img {
+  margin-bottom: 150px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=index.css.map */

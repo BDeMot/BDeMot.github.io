@@ -7,22 +7,57 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="style/index.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
-    <title>Document</title>
+    <title>Benjamin De Mot JavaScript developper in Paris</title>
 </head>
 <body>
+  <nav id="nav">
+    <a class='trigger_scrollToAboutMe' href="">about me</a>
+    <span>.</span>
+    <a class='trigger_scrollToProjects' href="">projects</a>
+    <span>.</span>
+    <a class='trigger_scrollToContacts' href="">contacts</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToAboutMe' href="">about me</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToProjects' href="">projects</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToContacts' href="">contacts</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToAboutMe' href="">about me</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToProjects' href="">projects</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToContacts' href="">contacts</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToAboutMe' href="">about me</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToProjects' href="">projects</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToContacts' href="">contacts</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToAboutMe' href="">about me</a>
+    <span>.</span>
+    <a tabindex="-1" class='trigger_scrollToProjects' href="">projects</a>
+    <span>.</span>
+  </nav>
   <div data-scroll-container>
     <div id="bigLetters" class="bigLetters">
       <span class="bigLetters__letter bigLetters__letter--b">b</span>
       <span class="bigLetters__letter bigLetters__letter--d">d</span>
       <span class="bigLetters__letter bigLetters__letter--m">m</span>
     </div>
-
-    <section class="presentation">
-      <div data-scroll-section id="firstParagraph"> 
+    
+    <main class="presentation">
+      <div data-scroll-section id="profilPicContainer">
+        <img data-scroll src="images/profilpic.png" id="profilPic" alt="profil pic">
+      </div>
+      <section data-scroll-section id="firstParagraph"> 
         <p 
-          data-scroll data-scroll-call="bigLettersTurnWhiteTrigger" 
+          id="aboutMe"
+          data-scroll 
+          data-scroll-call="bigLettersTurnWhiteTrigger" 
           data-scroll-direction="horizontal" 
-          data-scroll-speed="-4" 
+          data-scroll-speed="-10" 
           data-scroll-class="inViewport"
           class="presentation__text presentation__text--left">
             Hi, my name is <br> De Mot.
@@ -30,13 +65,13 @@
         <p 
           data-scroll  
           data-scroll-direction="horizontal" 
-          data-scroll-speed="4" 
+          data-scroll-speed="10" 
           data-scroll-class="inViewport"
           class="presentation__text presentation__text--right">
             Benjamin <br> De Mot.
         </p>
-      </div>
-      <div  data-scroll-section class="logosAndText">
+      </section>
+      <section  data-scroll-section class="logosAndText">
         <div class="logos">
           <img 
             data-scroll 
@@ -49,44 +84,148 @@
             data-scroll-delay="0.12"  
             data-scroll-speed="3"
             src="images/css.png"
-            alt="logo HTML">
+            alt="logo css">
           <img             
             data-scroll 
             data-scroll-delay="0.09"  
             data-scroll-speed="3"
-            src="images/html-5.png" 
-            alt="logo HTML">
+            src="images/JavaScript-logo.png" 
+            alt="logo javascript">
           <img             
             data-scroll 
             data-scroll-delay="0.06"  
             data-scroll-speed="3"
-            src="images/html-5.png"
-            alt="logo HTML">
-          <img             
+            src="images/vue.png"
+            alt="logo Vue.js">
+            <img             
             data-scroll 
             data-scroll-delay="0.03"  
             data-scroll-speed="3"
-            src="images/html-5.png" 
-            alt="logo HTML">
-
+            src="images/nodejs-icon.svg"
+            alt="logo Vue.js">
+            <img             
+            data-scroll 
+            data-scroll-delay="0.02"  
+            data-scroll-speed="3"
+            src="images/mongodb.png"
+            alt="logo Vue.js">
         </div>
-        <p 
+        <p
           data-scroll
           data-scroll-speed="3"
           data-scroll-class="inViewport" 
           class="presentation__text">
-          I'm a Front-End developer specialised in JavaScript, based in Paris.
+            I'm a french Front-End developer specialized in JavaScript and based in Paris.
         </p>
-      </div>
-      <footer data-scroll-section>
-        <div>Icons made by 
-          <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-        </div>
-      </footer>
-    </section>
+      </section>
+      <section data-scroll-section id="projectList">
+        <ul>
+          <li 
+            id="projects"
+            data-scroll 
+            data-scroll-speed="-8" 
+            data-scroll-direction="horizontal" 
+            class="projects"> 
+            <a href='https://99blag.netlify.app' target="_blank" rel="noopener">99blag</a>
+          </li>
+          <li class="preview">
+            <video autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+              <source src="vids/p7 - Google Chrome 2021-08-16 12-51-26.mp4" type="video/mp4">
+            </video>
+            <p class="description">
+              Web app based on 9gag: <br>
+              Vue.js 2 <br> Node.js <br> Express <br> MySQL <br> Netlify | Heroku | Cloudinary
+            </p>
+          </li>
+          <li 
+            data-scroll 
+            data-scroll-speed="8" 
+            data-scroll-direction="horizontal" 
+            class="projects">
+            <a href='https://github.com/BDeMot/DeMotBenjamin_6_11012021' target='_blank' rel="noopener">So Pekocko</a>
+          </li>
+          <li class="preview">
+            <video autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+              <source src="vids/sopekocko.mp4" type="video/mp4">
+            </video>
+            <p class="description">
+              API for a mini social network: <br>
+              Node.js <br> Express <br> MongoDB <br> MongoDB Atlas
+            </p>
+          </li>
+          <li 
+            data-scroll 
+            data-scroll-speed="-8" 
+            data-scroll-direction="horizontal" 
+            class="projects">
+            <a href='https://github.com/BDeMot/DeMotBenjamin_5_11012021' target='_blank' rel="noopener">Orinoco</a>
+          </li>
+          <li class="preview">
+            <video autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+              <source src="vids/p5.mp4" type="video/mp4">
+            </video>
+            <p class="description">
+              Front-End for a shopping web app: <br>
+              Vanilla JS <br> HTML/CSS <br> Bootstrap
+            </p>
+          </li>
+          <li 
+            data-scroll 
+            data-scroll-speed="8" 
+            data-scroll-direction="horizontal" 
+            class="projects">
+            <a href='https://github.com/bdebon/youtube-thumbnail-tester-chrome-extension' target='_blank' rel="noopener">PrevYou</a>
+          </li>
+          <li class="preview">
+            <img src="images/unnamed.jpg" alt="PrevYou">
+            <p class="description">
+              Contributions in an <br>
+              open source browser addon:<br>
+              Vanilla JS <br> 
+            </p>
+          </li>
+          <li 
+          data-scroll 
+          data-scroll-speed="-8" 
+          data-scroll-direction="horizontal" 
+          class="projects">
+          <a href='https://bdemot.github.io/DeMotBenjamin_3_11012021mmm/' target='_blank' rel="noopener">ohmyfood</a>
+        </li>
+        <li class="preview">
+          <video autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <source src="vids/p5 - Google Chrome.mp4" type="video/mp4">
+          </video>
+          <p class="description">
+            Integration of a responsive website: <br>
+            HTML/CSS<br>
+            Sass<br> 
+          </p>
+        </li>
+        </ul>
+      </section>
 
+      <section data-scroll-section id="contact">
+        <a href='https://www.linkedin.com/in/benjamin-de-mot/' target='_blank' title="link to Linkedin" rel="noopener">
+          <img data-scroll data-scroll-speed='-5' data-scroll-delay="0.05" src="images/linkedin.png" alt="Linkedin">
+        </a>
+        <a href='https://github.com/BDeMot' target='_blank' title="link to Github" rel="noopener">
+          <img data-scroll data-scroll-speed='-5' data-scroll-delay="0.15" src="images/github.png" alt="Github">
+        </a>
+        <a href='https://twitter.com/benjamin_mot' target='_blank' title="link to Twitter" rel="noopener">
+          <img data-scroll data-scroll-speed='-5' data-scroll-delay="0.25" src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href='mailto:benjamin.de.mot@gmail.com' title="send an email">
+          <img data-scroll data-scroll-speed='-5' data-scroll-delay="0.35" src="images/Gmail-Logo.png" alt="Twitter">
+        </a>
+      </section>
+
+    </main>
+    <footer data-scroll-section>
+      <p data-scroll data-scroll-speed='1'>Icons made by 
+        <a  href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </p>
+    </footer>
   </div>
-    
     <script src="./script/index.js"></script> 
 </body>
 </html>

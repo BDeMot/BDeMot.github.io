@@ -1,0 +1,14 @@
+#profilPicContainer{
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & img{
+        width: 370px;
+        height: 370px;
+        border-radius: 50%;
+        opacity: 0;
+        animation: appear 3s 1s forwards;
+    }
+}

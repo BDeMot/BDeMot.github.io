@@ -1,0 +1,31 @@
+$breakpoints : ("smallmobile" : 360px, "bigscreen" : 540px, "desktop" : 700px, "hires" : 1640px);
+
+$bg: beige;
+$fonts:  rgb(31, 30, 30);
+
+@mixin responsive($min-max, $size){
+    @media all and ($min-max+-width: $size){
+        @content;
+    }
+}
+
+@font-face {
+    font-family: candal;
+    src: url(./fonts/Candal/Candal-Regular.ttf);
+}
+
+@font-face {
+    font-family: bowlby;
+    src: url(./fonts/bowlbyOneSC/BowlbyOneSC-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bg;
+    overflow-x: hidden;
+}

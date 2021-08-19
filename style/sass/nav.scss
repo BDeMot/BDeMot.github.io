@@ -1,0 +1,33 @@
+@keyframes appear{
+  100% {
+    opacity: 1;
+  }
+}
+
+#nav{
+  background-color: $bg;
+  z-index: 1000;
+  text-align: right;
+  position: relative;
+  margin-right: 10px;
+  opacity: 0;
+  animation: appear 3s 1s forwards;
+  text-overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 40px;
+  & span {
+      font-size: 2em;
+  }
+  & a {
+      text-decoration: none;
+      font-family: candal;
+      color: $fonts;
+      margin: auto;
+      font-size: 1.4em;
+      transition: all .10s cubic-bezier(1, 0.01, 1, 1);
+      &:hover{
+          border-bottom: 5px solid $fonts;
+      }
+  }
+}

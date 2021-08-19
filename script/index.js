@@ -14,27 +14,6 @@ setTimeout(
   }, 
   100);
 
-scroll.on('call', (args) => {
-  switch(args) {
-    case 'bigLettersTurnWhiteTrigger': 
-    turnToWhite( document.getElementById('bigLetters') )
-    makeElementsAppear()
-    // scroll.update()
-  }
-})
-
-const turnToWhite = el => {
-  return el.style.color === 'white' ?  el.style.color = 'rgb(31, 30, 30)' : el.style.color = 'white'
-}
-
-
-const makeElementsAppear = () => {
-  document.getElementById('profilPic').style.opacity = '1'
-  document.getElementById('nav').style.opacity = '1'
-}
-
-  
-
 // ********** Projects List BG color change on hover
 
 const elements = document.getElementsByClassName('projects')

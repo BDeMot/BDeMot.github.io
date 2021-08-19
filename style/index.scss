@@ -1,75 +1,7 @@
-$bg: beige;
-$fonts:  rgb(31, 30, 30);
-
-@font-face {
-    font-family: candal;
-    src: url(./fonts/Candal/Candal-Regular.ttf);
-}
-
-@font-face {
-    font-family: bowlby;
-    src: url(./fonts/bowlbyOneSC/BowlbyOneSC-Regular.ttf);
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: $bg;
-    overflow-x: hidden;
-}
-
-#nav{
-    background-color: $bg;
-    z-index: 1000;
-    text-align: right;
-    position: relative;
-    margin-right: 10px;
-    opacity: 0;
-    transition: opacity 1s cubic-bezier(1, 0.01, 1, 1);
-    text-overflow: hidden;
-    white-space: nowrap;
-    overflow: hidden;
-    height: 40px;
-    & span {
-        font-size: 2em;
-    }
-    & a {
-        text-decoration: none;
-        font-family: candal;
-        color: $fonts;
-        margin: auto;
-        font-size: 1.4em;
-        transition: all .10s cubic-bezier(1, 0.01, 1, 1);
-        &:hover{
-            border-bottom: 5px solid $fonts;
-        }
-    }
-}
-
-.bigLetters{
-    font-size: 4500%;
-    font-family: bowlby;
-    font-weight: bold;
-    color: $fonts;
-    transition: all 1s linear;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    position: relative;
-    top: 38vh;
-    margin-bottom: 33vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    &__letter{
-        line-height: .4;
-        text-transform: uppercase;
-    }
-}
+@import './sass/utils.scss';
+@import './sass/nav.scss';
+@import './sass/bigLetters.scss';
+@import './sass/profilPic.scss';
 
 .presentation{
     margin-top: 75vh;
@@ -118,21 +50,6 @@ body{
             margin: 30px;
             width: 200px;
         }
-    }
-}
-
-#profilPicContainer{
-    position: absolute;
-    top: 350px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    & img{
-        width: 370px;
-        height: 370px;
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity .5s linear;
     }
 }
 

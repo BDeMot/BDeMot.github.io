@@ -8,6 +8,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: 10vh;
         & li{
             border: 2px solid $bg;
             background-color: $fonts;
@@ -34,7 +35,7 @@
             justify-content: center;
             & .description {
                 font-family: candal;
-                font-size: 2em;
+                font-size: 5vh;
                 color: $bg;
                 margin-left: 4%;
                 display: flex;

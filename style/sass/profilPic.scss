@@ -1,12 +1,13 @@
 #profilPicContainer{
     position: absolute;
-    top: 350px;
+    top: 33vh;
     width: 100%;
     display: flex;
     justify-content: center;
     & img{
-        width: 370px;
-        height: 370px;
+        min-width: 25vw;
+        max-width: 350px;
+        height: auto;
         border-radius: 50%;
         opacity: 0;
         animation: appear 3s 1s forwards;

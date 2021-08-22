@@ -61,3 +61,28 @@ const nav_scrollTo = [
 nav_scrollTo.forEach(el => {
   autoScroller(el.start, el.target)
 } )
+
+//********** remove Scroll effects on Projects Lists elements on smartphone screen
+
+const removeAttribute = () => {
+  const windowWidth = window.innerWidth
+
+  if(windowWidth < 700) {
+    const projectList = [...document.getElementsByClassName('projects')]
+    projectList.forEach(el =>{ 
+      const dataset = el.dataset
+      for (let key in dataset) {
+      el.removeAttribute("data-" + key.split(/(?=[A-Z])/).join("-").toLowerCase())
+      el.removeAttribute('style')
+    }
+  })
+
+  }
+
+}
+
+removeAttribute()
+
+window.addEventListener('resize', function() {
+  removeAttribute()
+})

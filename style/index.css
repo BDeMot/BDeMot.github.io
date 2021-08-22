@@ -103,15 +103,27 @@ body {
   justify-content: center;
   font-size: 10vh;
 }
+@media all and (max-width: 700px) {
+  #projectList ul {
+    transform: rotate(0);
+  }
+}
 #projectList ul li {
   border: 2px solid beige;
   background-color: #1f1e1e;
   width: 200%;
   position: relative;
-  right: 60%;
+  right: 50%;
   text-align: center;
   z-index: 0;
   transition: all 100ms linear;
+}
+@media all and (max-width: 700px) {
+  #projectList ul li {
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
 }
 #projectList ul li:hover + .preview {
   visibility: visible;
@@ -136,17 +148,31 @@ body {
   display: flex;
   align-items: center;
 }
+@media all and (max-width: 700px) {
+  #projectList ul .preview .description {
+    font-size: 3vh;
+  }
+}
 #projectList ul .preview video {
   border: 25px solid beige;
+}
+@media all and (max-width: 700px) {
+  #projectList ul .preview video {
+    display: none;
+  }
 }
 #projectList ul .preview img {
   border: 25px solid beige;
 }
+@media all and (max-width: 700px) {
+  #projectList ul .preview img {
+    display: none;
+  }
+}
 #projectList ul li a {
-  margin-left: 500px;
   font-family: candal;
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: calc(30px + 4vw);
   font-weight: bold;
   color: beige;
 }
@@ -209,7 +235,7 @@ body {
 .logosAndText p {
   width: 50%;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 1128px) {
   .logosAndText p {
     width: 100%;
   }
@@ -219,7 +245,7 @@ body {
   margin: 20px;
   margin-top: 200px;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 1128px) {
   .logosAndText .logos {
     width: 100%;
     display: flex;
@@ -234,12 +260,12 @@ body {
   margin: 30px;
   width: 200px;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 1128px) {
   .logosAndText .logos img {
     width: 30vw;
   }
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 1128px) {
   .logosAndText {
     flex-direction: column-reverse;
   }

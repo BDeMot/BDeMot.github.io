@@ -2,6 +2,7 @@
 @import './sass/nav.scss';
 @import './sass/bigLetters.scss';
 @import './sass/profilPic.scss';
+@import './sass/projects.scss';
 
 .presentation{
     margin-top: 75vh;
@@ -50,63 +51,6 @@
             margin: 30px;
             width: 200px;
         }
-    }
-}
-
-#projectList{
-    margin-top: 300px;
-    margin-bottom: 400px;
-   
-    ul{
-        list-style-type: none;
-        position: relative;
-        right: 1000px; 
-        transform: rotate(-5deg);
-        & li{
-            border: 2px solid white;
-            background-color: $fonts;
-            width: 200%;
-            text-align: center; z-index: 0;
-            transition: all 100ms linear;
-            &:hover + .preview{
-                visibility: visible;
-                opacity: 1;
-                height: 400px;
-            }
-        }
-        & .preview{
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.3s linear;
-            height: 1px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            & .description {
-                font-family: candal;
-                font-size: 2em;
-                color: $bg;
-                margin-left: 4%;
-                display: flex;
-                align-items: center;
-            }
-            & video {
-                border: 25px solid $bg;
-            }
-            & img {
-                border: 25px solid $bg;
-            }
-        }
-        & li a{ 
-                margin-left: 500px;
-                font-family: candal;
-                text-transform: uppercase;
-                font-size: 100px;
-                font-weight: bold;
-                color: $bg;                
-            }
-        
     }
 }
 

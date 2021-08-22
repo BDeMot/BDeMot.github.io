@@ -44,7 +44,7 @@ body {
   color: #1f1e1e;
   margin: auto;
   font-size: 1.4em;
-  transition: all 0.1s cubic-bezier(1, 0.01, 1, 1);
+  transition: all 0.1s ease-in;
 }
 #nav a:hover {
   border-bottom: 5px solid #1f1e1e;
@@ -89,6 +89,65 @@ body {
   border-radius: 50%;
   opacity: 0;
   animation: appear 3s 1s forwards;
+}
+
+#projectList {
+  margin-top: 300px;
+  margin-bottom: 400px;
+}
+#projectList ul {
+  list-style-type: none;
+  transform: rotate(-5deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#projectList ul li {
+  border: 2px solid beige;
+  background-color: #1f1e1e;
+  width: 200%;
+  position: relative;
+  right: 60%;
+  text-align: center;
+  z-index: 0;
+  transition: all 100ms linear;
+}
+#projectList ul li:hover + .preview {
+  visibility: visible;
+  opacity: 1;
+  height: 400px;
+}
+#projectList ul .preview {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+  height: 1px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#projectList ul .preview .description {
+  font-family: candal;
+  font-size: 2em;
+  color: beige;
+  margin-left: 4%;
+  display: flex;
+  align-items: center;
+}
+#projectList ul .preview video {
+  border: 25px solid beige;
+}
+#projectList ul .preview img {
+  border: 25px solid beige;
+}
+#projectList ul li a {
+  margin-left: 500px;
+  font-family: candal;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bold;
+  color: beige;
 }
 
 .presentation {
@@ -139,62 +198,6 @@ body {
 .logosAndText .logos img {
   margin: 30px;
   width: 200px;
-}
-
-#projectList {
-  margin-top: 300px;
-  margin-bottom: 400px;
-}
-#projectList ul {
-  list-style-type: none;
-  position: relative;
-  right: 1000px;
-  transform: rotate(-5deg);
-}
-#projectList ul li {
-  border: 2px solid white;
-  background-color: #1f1e1e;
-  width: 200%;
-  text-align: center;
-  z-index: 0;
-  transition: all 100ms linear;
-}
-#projectList ul li:hover + .preview {
-  visibility: visible;
-  opacity: 1;
-  height: 400px;
-}
-#projectList ul .preview {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s linear;
-  height: 1px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#projectList ul .preview .description {
-  font-family: candal;
-  font-size: 2em;
-  color: beige;
-  margin-left: 4%;
-  display: flex;
-  align-items: center;
-}
-#projectList ul .preview video {
-  border: 25px solid beige;
-}
-#projectList ul .preview img {
-  border: 25px solid beige;
-}
-#projectList ul li a {
-  margin-left: 500px;
-  font-family: candal;
-  text-transform: uppercase;
-  font-size: 100px;
-  font-weight: bold;
-  color: beige;
 }
 
 #contact {

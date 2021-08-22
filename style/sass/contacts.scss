@@ -1,0 +1,8 @@
+#contact {
+    display: flex;
+    justify-content: space-around;
+    & img {
+    margin-bottom: 150px;
+    height: 300px;
+    }
+}

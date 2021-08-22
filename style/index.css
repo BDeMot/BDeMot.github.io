@@ -150,6 +150,15 @@ body {
   color: beige;
 }
 
+#contact {
+  display: flex;
+  justify-content: space-around;
+}
+#contact img {
+  margin-bottom: 150px;
+  height: 300px;
+}
+
 .presentation {
   margin-top: 75vh;
 }
@@ -176,11 +185,6 @@ body {
   margin-bottom: 50vh;
 }
 
-.inViewport {
-  opacity: 1;
-  transition: all 3.4s ease-out;
-}
-
 .logosAndText {
   display: flex;
   flex-direction: row;
@@ -200,13 +204,9 @@ body {
   width: 200px;
 }
 
-#contact {
-  display: flex;
-  justify-content: space-around;
-}
-#contact img {
-  margin-bottom: 150px;
-  height: 300px;
+.inViewport {
+  opacity: 1;
+  transition: all 3.4s ease-out;
 }
 
 /*# sourceMappingURL=index.css.map */

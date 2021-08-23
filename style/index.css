@@ -248,7 +248,7 @@ body {
 .logosAndText .logos {
   width: 50%;
   margin: 20px;
-  margin-top: 200px;
+  margin-top: 80px;
 }
 @media all and (max-width: 1128px) {
   .logosAndText .logos {

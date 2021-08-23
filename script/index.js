@@ -12,7 +12,7 @@ setTimeout(
   function(){ 
     scroll.update();
   }, 
-  100);
+  500);
 
 // ********** Projects List BG color change on hover
 
@@ -39,46 +39,46 @@ arrayOfElements.forEach(el =>{
 
 //********** Prevent default links' behavior and add 'scrollTo' methods
 
-const autoScroller = (start, target) => {
+const autoScroller = (start, target, options) => {
   const scrollTo_trigger = [...document.getElementsByClassName(start)]
   scrollTo_trigger.forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault()
-      scroll.scrollTo(target)
+      scroll.scrollTo(target, options)
     })
   })
 }
 
 const nav_scrollTo = [
   {start: 'trigger_scrollToAboutMe',
-  target: '#aboutMe'},
+  target: '#aboutMe',
+  options: {offset : -230}},
   {start: 'trigger_scrollToProjects',
-  target: '#projects'},
+  target: '#projects',
+  options: window.innerWidth < 890 ? {offset : -120} : 0},
   {start: 'trigger_scrollToContacts',
   target: '#contact'}
 ]
 
 nav_scrollTo.forEach(el => {
-  autoScroller(el.start, el.target)
+  autoScroller(el.start, el.target, el.options)
 } )
 
 //********** remove Scroll effects on Projects Lists elements on smartphone screen
 
 const removeAttribute = () => {
-  const windowWidth = window.innerWidth
-
-  if(windowWidth < 700) {
+  if(window.innerWidth < 890) {
     const projectList = [...document.getElementsByClassName('projects')]
+
     projectList.forEach(el =>{ 
       const dataset = el.dataset
+
       for (let key in dataset) {
-      el.removeAttribute("data-" + key.split(/(?=[A-Z])/).join("-").toLowerCase())
-      el.removeAttribute('style')
-    }
-  })
-
+        el.removeAttribute("data-" + key.split(/(?=[A-Z])/).join("-").toLowerCase())
+        el.removeAttribute('style')
+      }
+    })
   }
-
 }
 
 removeAttribute()

@@ -29,7 +29,10 @@
             &:hover + .preview{
                 visibility: visible;
                 opacity: 1;
-                height: 400px;
+                height: 44vh;
+                @include responsive(max, map-get($breakpoints, "hires")){
+                    height: 30vh;
+                }
             }
         }
         & .preview{
@@ -43,7 +46,7 @@
             justify-content: center;
             & .description {
                 font-family: candal;
-                font-size: 5vh;
+                font-size: 2.5vw;
                 color: $bg;
                 margin-left: 4%;
                 display: flex;

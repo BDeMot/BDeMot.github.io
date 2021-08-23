@@ -103,7 +103,7 @@ body {
   justify-content: center;
   font-size: 10vh;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   #projectList ul {
     transform: rotate(0);
   }
@@ -118,7 +118,7 @@ body {
   z-index: 0;
   transition: all 100ms linear;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   #projectList ul li {
     position: relative;
     right: 0;
@@ -128,7 +128,12 @@ body {
 #projectList ul li:hover + .preview {
   visibility: visible;
   opacity: 1;
-  height: 400px;
+  height: 44vh;
+}
+@media all and (max-width: 1128px) {
+  #projectList ul li:hover + .preview {
+    height: 30vh;
+  }
 }
 #projectList ul .preview {
   visibility: hidden;
@@ -142,13 +147,13 @@ body {
 }
 #projectList ul .preview .description {
   font-family: candal;
-  font-size: 5vh;
+  font-size: 2.5vw;
   color: beige;
   margin-left: 4%;
   display: flex;
   align-items: center;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   #projectList ul .preview .description {
     font-size: 3vh;
   }
@@ -156,7 +161,7 @@ body {
 #projectList ul .preview video {
   border: 25px solid beige;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   #projectList ul .preview video {
     display: none;
   }
@@ -164,7 +169,7 @@ body {
 #projectList ul .preview img {
   border: 25px solid beige;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   #projectList ul .preview img {
     display: none;
   }
@@ -203,7 +208,7 @@ body {
   position: relative;
   left: 20vw;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   .presentation__text {
     position: static;
     width: 100vw;
@@ -211,7 +216,7 @@ body {
     font-size: 9vh;
   }
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   .presentation__text--secondPart {
     font-size: 8vh;
   }
@@ -220,7 +225,7 @@ body {
 #firstParagraph {
   margin-bottom: 50vh;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 890px) {
   #firstParagraph {
     margin-bottom: 15vh;
   }
